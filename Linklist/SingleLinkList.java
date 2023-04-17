@@ -109,6 +109,7 @@ public class SingleLinkList{
         while(count<pos -1)
         {
         previous = previous.next;
+        count++;
        }
         Node current = previous.next;
         previous.next=current.next;
