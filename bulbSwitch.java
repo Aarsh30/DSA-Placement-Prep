@@ -3,3 +3,10 @@ class Solution {
         return (int) Math.sqrt(n);
     }
 }
+
+public static void main(String[] args)
+{
+    Solution sol = new Solution();
+    int n;
+    
+}

@@ -1,4 +1,4 @@
-package Linklist;
+package LinkList;
 
 import java.util.*;
 
@@ -129,3 +129,11 @@ public class SingleLinkList{
             sll.deleteFrist(0);
     }
 }
+
+
+
+
+
+
+
+Node 

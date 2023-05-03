@@ -4,4 +4,4 @@ git commit -m "new changes"
 
 
 
-git push -u origin main
+git push -u origin1 main
