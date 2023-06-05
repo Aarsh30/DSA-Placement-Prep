@@ -1,5 +1,5 @@
 class Solution {
-    public double new21Game(int n, int k, int maxPts) {
+    public double git (int n, int k, int maxPts) {
         double dp[] = new double[n + 1];
         dp[0] = 1;
         double s = k > 0 ? 1 : 0;
