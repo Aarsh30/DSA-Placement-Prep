@@ -1,5 +1,5 @@
 class Solution {
-    public boolean canMakeArithmeticProgression(int[] arr) {
+    public boolean          (int[] arr) {
       Arrays.sort(arr);
       int d = arr[1]-arr[0];
       for (int i = 2; i < arr.length; ++i) {
