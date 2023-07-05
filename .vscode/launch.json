@@ -1,0 +1,104 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "TCS",
+            "request": "launch",
+            "mainClass": "TCS",
+            "projectName": "my codes_4e178349"
+        },
+        {
+            "name": "Java",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ]
+        },
+        {
+            "name": "Java Console App",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ],
+            "externalConsole": true
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "ArmstrongNumber",
+            "request": "launch",
+            "mainClass": "ArmstrongNumber",
+            "projectName": "my codes_4e178349"
+        },
+        {
+            "type": "java",
+            "name": "BinarySearch",
+            "request": "launch",
+            "mainClass": "BinarySearch",
+            "projectName": "my codes_4e178349"
+        },
+        {
+            "type": "java",
+            "name": "DoublyLinkList",
+            "request": "launch",
+            "mainClass": "DoublyLinkList",
+            "projectName": "my codes_4e178349"
+        },
+        {
+            "type": "java",
+            "name": "LinkList",
+            "request": "launch",
+            "mainClass": "LinkList",
+            "projectName": "my codes_4e178349"
+        },
+        {
+            "type": "java",
+            "name": "Pratice",
+            "request": "launch",
+            "mainClass": "Pratice",
+            "projectName": "my codes_4e178349"
+        },
+        {
+            "type": "java",
+            "name": "Q1",
+            "request": "launch",
+            "mainClass": "Q1",
+            "projectName": "my codes_4e178349"
+        },
+        {
+            "type": "java",
+            "name": "SingleLinkList",
+            "request": "launch",
+            "mainClass": "SingleLinkList",
+            "projectName": "my codes_4e178349"
+        },
+        {
+            "type": "java",
+            "name": "Node",
+            "request": "launch",
+            "mainClass": "Stack.Node",
+            "projectName": "my codes_4e178349"
+        }
+    ]
+}
