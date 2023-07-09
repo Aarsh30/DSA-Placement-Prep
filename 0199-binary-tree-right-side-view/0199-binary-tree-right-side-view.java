@@ -23,7 +23,7 @@ class Solution {
         {
             list.add(root.val);
         }
-        tree(root.right,level+1,list);
+        tree(root.right,level+1,list);  //for left traversal just swap left and right
         tree(root.left,level+1,list);        
                 
     }
