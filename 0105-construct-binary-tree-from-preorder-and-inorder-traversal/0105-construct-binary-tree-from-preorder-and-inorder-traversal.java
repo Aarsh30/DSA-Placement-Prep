@@ -15,6 +15,9 @@
  */
 class Solution {
     public TreeNode buildTree(int[] preorder, int[] inorder) {
+          if(inorder == null  || preorder == null || inorder.length!=preorder.length)
+            return null;
+
      Map<Integer,Integer> imap = new HashMap<Integer,Integer>();
         for(int i=0;i<inorder.length;i++)
         {
