@@ -13,32 +13,30 @@
  *     }
  * }
  */
-
 class Solution {
     public boolean isValidBST(TreeNode root) {
-        List<Integer> list = new ArrayList<>();
-        inorder(root,list);
-        boolean sorted = isSorted(list);
-            
-        return sorted;
         
+        boolean check = isCheck(root,null,null);
+        return check;
     }
-    void inorder(TreeNode root, List<Integer>list)
+    
+    public static boolean isCheck(TreeNode root, TreeNode min,TreeNode max)
     {
-        if(root!=null)
+        if(root == null)
         {
-            inorder(root.left,list);
-            list.add(root.val);
-            inorder(root.right,list);
+            return true;
         }
-       
-    }
-    boolean isSorted(List<Integer> list) {
-        for (int i = 0; i < list.size() - 1; i++) {
-            if (list.get(i) >= list.get(i + 1)) {
-                return false; 
-            }
+         if(min!=null && root.val<= min.val)
+        {
+            return false;
+        
         }
-        return true; 
+        if(max!=null && root.val>= max.val)
+        {
+            return false;
+        
+        }
+        
+        return isCheck(root.left,min,root) && isCheck(root.right,root,max);
     }
 }
