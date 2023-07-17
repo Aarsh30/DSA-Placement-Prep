@@ -18,33 +18,54 @@ class Node {
 }
 */
 
-class Solution {
-    public Node cloneGraph(Node node) {
+// class Solution {
+//     public Node cloneGraph(Node node) {
+// //         if(node == null) return null;
+        
+// //         Node graph = new Node(node.val);
+        
+// //         HashMap<Node,Node> mp = new HashMap<>();
+// //         mp.put(node,graph);
+        
+// //         Queue<Node> queue = new LinkedList<>();
+// //         queue.offer(node);
+        
+// //         while(!queue.isEmpty())
+// //         {
+// //             Node cur = queue.poll();
+// //             for(Node val:cur.neighbors)
+// //             {
+// //                 if(!mp.containsKey(val))
+// //                 {
+// //                     mp.put(val,new Node(val.val));
+// //                     queue.offer(val);
+// //                 }
+// //                 mp.get(cur).neighbors.add(mp.get(val));
+// //             }
+// //         }
+        
+// //         return graph;
+
+        
+//     }
+// }
+
+class Solution
+{
+    HashMap<Node,Node> map = new HashMap<>();
+    public Node cloneGraph(Node node)
+    {
+        
         if(node == null) return null;
+        if(map.containsKey(node))
+            return map.get(node);
         
-        Node graph = new Node(node.val);
-        
-        HashMap<Node,Node> mp = new HashMap<>();
-        mp.put(node,graph);
-        
-        Queue<Node> queue = new LinkedList<>();
-        queue.offer(node);
-        
-        while(!queue.isEmpty())
+        map.put(node,new Node(node.val));
+        for(Node val : node.neighbors)
         {
-            Node cur = queue.poll();
-            for(Node val:cur.neighbors)
-            {
-                if(!mp.containsKey(val))
-                {
-                    mp.put(val,new Node(val.val));
-                    queue.offer(val);
-                }
-                mp.get(cur).neighbors.add(mp.get(val));
-            }
+            map.get(node).neighbors.add(cloneGraph(val));
         }
-        
-        return graph;
-        
+        return map.get(node);              
+    
     }
 }
