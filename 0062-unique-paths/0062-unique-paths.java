@@ -1,34 +1,24 @@
 class Solution {
-    
-    public int uniquePathsCount(int m, int n, int [][]dp)
-    {
-        for(int  i=0;i<m;i++)
+    public int uniquePaths(int m, int n) {
+        int prev[] = new int[n];
+        for(int i=0;i<m;i++)
         {
+            int temp[]= new int[n];
             for(int j=0;j<n;j++)
             {
                 if(i==0 && j==0)
                 {
-                    dp[i][j]=1;
+                    temp[j]=1;
                     continue;
-                    
                 }
                 int up=0,left =0;
-                if(i>0)
-                    up = dp[i-1][j];
-                if(j>0)
-                    left = dp[i][j-1];
+                if(i>0) up = prev[j];
+                if(j>0) left = temp[j-1];
+                temp[j]= up+left;
                 
-               dp[i][j]= up +left;
             }
+            prev = temp;
         }
-        return dp[m-1][n-1];
-    }
-    public int uniquePaths(int m, int n) {
-        int dp[][] = new int[m][n];
-            for(int[]rows :dp)
-            {
-                Arrays.fill(rows,-1);                
-            }
-        return uniquePathsCount(m,n,dp);
+        return prev[n-1];
     }
 }
