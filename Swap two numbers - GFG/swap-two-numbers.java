@@ -32,9 +32,18 @@ class Solution{
     //   a=b;
     //   b=temp;
     
-    a= a+b;
-    b=a-b;
-    a=a-b;
+    // a= a+b;
+    // b=a-b;
+    // a=a-b;
+    
+    // a=a*b;
+    // b=a/b;
+    // a=a/b;
+    
+    int x =a^b;
+    a=x^a;
+    b=x^b;
+    
       
       ans.add(a);
       ans.add(b);
