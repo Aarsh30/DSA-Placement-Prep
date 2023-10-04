@@ -35,6 +35,6 @@ class Solution{
         {
             st.append("0");
         }
-        return new String(st)+bin;
+        return st+bin;
     }
 }
