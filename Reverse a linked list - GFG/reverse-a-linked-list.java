@@ -70,6 +70,8 @@ class Solution
     //Function to reverse a linked list.
     Node reverseList(Node head)
     {
+        // code here
+      
      ArrayList<Integer> list = new ArrayList<>();
      
      for(Node curr = head;curr!=null;curr=curr.next)
@@ -83,7 +85,5 @@ class Solution
         curr.data = list.remove(list.size()-1);
      }
      return head;
-    
-        
     }
 }
